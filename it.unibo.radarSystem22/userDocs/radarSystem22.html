@@ -220,13 +220,15 @@ Si desidera costruire un’applicazione software capace di:
  
 
 <h2>Requirement analysis</h2>
- 
+ Si sono poste delle domande sulla distribuzione dell'applicazione desiderata e su quali componenti abbiamo a disposizione al momento dell'analisi. Risulta che il componente fornisca degli script per gestire il led (bash), del codice C per la gestione del sonar e una libreria (radarPojo) che fornisce una GUI per il radar.
+Al momento si opta per un' applicazione locale ma con visioni verso il distribuito (sonar e led su macchine distinte).  
 
 </div>
 
 <h2>Problem analysis</h2>
- 
-
+Partendo da quello che si ha disponibile con approccio bottom-up.Si mappano i requisiti nei componenti disponibili: Sonar (input), Led e Radar (output).
+ <p>Ci si muove verdo l'adozione din un pattern observer con approccio a polling: Si introduce un componente Controller (conterrà la business logic) che "chiederà" al Sonar le distanze rilevate ad intervalli regolari
+</p>
 <h2>Test plans</h2> 
 
 
@@ -255,9 +257,12 @@ Si desidera costruire un’applicazione software capace di:
 <br/><br/> 	
 </div>  
 
-<div style="background-color:rgba(86, 56, 253, 0.9); width:60%;text-align:left;color:white">
-By studentName email: student@studio.unibo.it  
-<img src="./img/emiglio.png" alt="mbot" width="15%" height="15%">
+<div style="width:60%;text-align:left;color:black">
+Roberto Calvani 
+<br>
+email: roberto.calvani@studio.unibo.it  
+</br>
+<img src="./img/foto_roberto.jpeg" alt="mbot" width="25%" height="25%">
 </div> 
 </body>
 </html>
