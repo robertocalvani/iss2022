@@ -25,7 +25,7 @@ public class TestLed {
 		
 		System.out.println("testLedMock");
 		
-		ILed led = new LedMock(true);
+		ILed led = new LedMock();
 		assertTrue( led.getState() );
 		
  		led.turnOn();

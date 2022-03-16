@@ -11,6 +11,7 @@ sourceCompatibility = 1.8
 repositories {
     jcenter()
     flatDir { dirs '../unibolibs' }
+    flatDir { dirs './libs'}
 }
 
 dependencies {
@@ -23,6 +24,9 @@ dependencies {
     //RADAR (support and GUI)
     implementation name: 'radarPojo'
     implementation group: 'org.pushingpixels', name: 'trident', version: '1.3'
+    
+    //CUSTOM RadarSystem
+	implementation name: 'it.unibo.radarSystem22.domain-1.0'
 }
 
 sourceSets {
@@ -38,7 +42,7 @@ eclipse {
     }
 }
 
-mainClassName = 'it.unibo.xxx'  //TODO
+mainClassName = 'it.unibo.radarSystem22.sprint1.RadarSystemSprint1Main'  //TODO
 
 jar {
     from sourceSets.main.allSource
