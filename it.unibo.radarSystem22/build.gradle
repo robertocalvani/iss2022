@@ -71,7 +71,7 @@ jar {
 distributions {
     main {
         contents {
-            from './Domain	SystemConfig.json'
+            from './DomainSystemConfig.json'
             from './RadarSystemConfig.json'
         }
     }

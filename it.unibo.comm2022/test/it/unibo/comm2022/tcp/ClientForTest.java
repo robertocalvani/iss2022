@@ -17,7 +17,7 @@ private Interaction2021 conn;
 	public void doWorkWithServerOff( String name, int ntimes  ) {
  		try {
 			connect(ntimes);
-			fail();  //non deve connttersi ...
+			fail();  //non deve connettersi ...
 		} catch (Exception e) {
 			ColorsOut.outerr(name + " | ERROR (expected)" + e.getMessage());	
 		}

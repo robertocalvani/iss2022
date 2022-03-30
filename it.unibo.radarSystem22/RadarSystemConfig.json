@@ -5,8 +5,9 @@
 "testing"          : "false",
 
 "hostAddr"         : "localhost",
-"raspAddr"         : "localhost",
+"raspAddr"         : "10.42.0.148",
 "serverPort"       : "8023",
 "ledPort"          : "8010",
 "sonarPort"        : "8015"
+"protocolType"	   : "tcp"
 }

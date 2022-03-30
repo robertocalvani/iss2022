@@ -11,8 +11,14 @@ private Runtime rt  = Runtime.getRuntime();
 	@Override
 	protected void ledActivate(boolean val) {
 		try {
-			if( val ) rt.exec( "sudo bash led25GpioTurnOn.sh" );
-			else rt.exec( "sudo bash led25GpioTurnOff.sh" );
+			if( val ) {
+				System.out.println("LedConcrete | START ON SCRIPT ");
+				rt.exec( "python ledPythonOn.py" );
+			}
+			else {
+				System.out.println("LedConcrete | START OFFs SCRIPT ");
+				rt.exec( "python ledPythonOff.py" );
+			}
 		} catch (IOException e) {
 			System.out.println("LedConcrete | ERROR " +  e.getMessage());
 		}

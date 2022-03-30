@@ -9,6 +9,7 @@ import java.io.Reader;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import it.unibo.comm2022.ProtocolType;
 import it.unibo.radarSystem22.domain.utils.ColorsOut;
 
 
@@ -25,6 +26,7 @@ public class RadarSystemConfig {
 //Aggiunte dello SPRINT2a 	
 	public static int ledPort             = 8010;
 	public static int sonarPort           = 8015;
+	public static ProtocolType protcolType;
  	
 	
 	
@@ -56,6 +58,8 @@ public class RadarSystemConfig {
 //Aggiunte dello SPRINT2a
 	        ledPort         = object.getInt("ledPort");
 	        sonarPort       = object.getInt("sonarPort");
+//Aggiunte dello SPRINT3
+	        //protcolType		= object.getEnum(protcolType, "protcolType");
 	        
 		} catch (FileNotFoundException e) {
  			ColorsOut.outerr("setTheConfiguration ERROR " + e.getMessage() );

@@ -42,7 +42,7 @@ public class RadarSysSprint2aDevicesOnRaspMain implements IApplication{
 			RadarSystemConfig.setTheConfiguration(systemConfig);
 		}
 		if( domainConfig == null && systemConfig == null) {
-			DomainSystemConfig.simulation  = true;
+			DomainSystemConfig.simulation  = false;
 	    	DomainSystemConfig.testing     = false;			
 	    	DomainSystemConfig.tracing     = false;			
 			DomainSystemConfig.sonarDelay  = 200;

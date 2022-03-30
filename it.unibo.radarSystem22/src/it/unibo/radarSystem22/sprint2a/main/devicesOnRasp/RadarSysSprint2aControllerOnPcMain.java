@@ -43,11 +43,11 @@ public class RadarSysSprint2aControllerOnPcMain implements IApplication{
 		DomainSystemConfig.testing      	= false;			
 		DomainSystemConfig.sonarDelay       = 200;
 		//Su PC
-		DomainSystemConfig.simulation   	= true;
-		
+		DomainSystemConfig.simulation   	= false;
+
 		RadarSystemConfig.DLIMIT      		= 12;  
 		RadarSystemConfig.RadarGuiRemote    = false;		
-		RadarSystemConfig.raspAddr          = "192.168.1.9";		 	
+		RadarSystemConfig.raspAddr          = "10.42.0.148";		 	
 		
 		CommSystemConfig.tracing            = false;
 	}

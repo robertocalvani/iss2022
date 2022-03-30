@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import it.unibo.comm2022.common.NaiveApplHandler;
+
  
 
 public class TestTcpSupports {
@@ -25,12 +27,12 @@ private TcpServer server;
 		System.out.println(" =============== SERVER DEACTIVATED" );
 	}	
 		
-	@Test 
-	public void testClientNoServer() {
-		server.deactivate();
-		System.out.println(" ---------------- testClientNoServer" );
-  		new ClientForTest().doWorkWithServerOff( "clientNoServer", 3  );	
-	}
+//	@Test 
+//	public void testClientNoServer() {
+//		server.deactivate();
+//		System.out.println(" ---------------- testClientNoServer" );
+//  		new ClientForTest().doWorkWithServerOff( "clientNoServer", 3  );	
+//	}
 	
 	
 	@Test 
