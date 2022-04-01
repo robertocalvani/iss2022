@@ -22,7 +22,7 @@ private int port = 8078;
 
 		ProxyAsClient pxy = new ProxyAsClient("pxy1", "localhost", ""+port, ProtocolType.tcp);
 
-		//Attivo due Thread di richiesta
+		//Attivo due Thread di richiesta che per inviare le richieste usano lo stesso Prpxy ()
  		
 		new Thread() {
 			public void run() {

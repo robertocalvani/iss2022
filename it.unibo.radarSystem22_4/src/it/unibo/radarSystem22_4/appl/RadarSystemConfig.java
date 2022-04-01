@@ -21,7 +21,7 @@ public class RadarSystemConfig {
 	
  
  	public static String hostAddr         = "localhost";		
-	public static String raspAddr         = "10.42.0.148";		
+	public static String raspAddr         = "localhost";//"10.42.0.148";		
  
 	//Aggiunte dello SPRINT4 	
 	public static ProtocolType protcolType= ProtocolType.tcp;		
