@@ -8,4 +8,9 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.sprint3.main.devicesOnRasp.RadarSysSprint3DevicesOnRaspMain"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="it.unibo.is.interfaces.IObserver"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IObserver"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonarObservable"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.models.SonarModel"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DistanceMeasured"/>
 </qualifiedTypeNameHistroy>
