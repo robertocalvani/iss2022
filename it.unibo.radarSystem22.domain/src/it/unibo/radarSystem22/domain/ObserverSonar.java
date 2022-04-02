@@ -9,6 +9,10 @@ public class ObserverSonar implements IObserver{
 	private String distanza;
 	private int id;
 	
+	public ObserverSonar(int i) {
+		this.id = i;
+	}
+	
 	@Override
 	public void update(String value) {
 		System.out.println("Observer" + id + "distanza: " + value);

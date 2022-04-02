@@ -1,5 +1,7 @@
 package it.unibo.radarSystem22.domain;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -15,19 +17,22 @@ import it.unibo.radarSystem22.domain.utils.ColorsOut;
 public class DistanceMeasured extends Observable implements IDistanceMeasured{
 private IDistance d;
 
+
 	//public DistanceMeasured() {}
 	@Override
 	public void setVal( IDistance v ) {
 		d = v;
  		setChanged();
 		ColorsOut.out("DistanceMeasured setVal="+v + " obsNum=" + countObservers() + " hasChanged=" + hasChanged(), ColorsOut.MAGENTA);
-	    
 		notifyObservers( d );		
 	}
+	
+	
 	@Override
 	public IDistance getDistance(   ) {
 		return d;
 	}	
+	
 	@Override
 	public int getVal() { return d.getVal(); }
 	

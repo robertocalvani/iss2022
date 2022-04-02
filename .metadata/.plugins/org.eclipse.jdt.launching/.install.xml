@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+    <entry loc="C:\Users\Roberto\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208" stamp="1648109191635"/>
+    <entry loc="C:\Users\Roberto\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208\jre" stamp="1648109191633"/>
     <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1646911043321"/>
 </dirs>

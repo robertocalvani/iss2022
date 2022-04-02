@@ -1,29 +1,4 @@
-INDEX VERSION 1.131+/home/rcalvani/Desktop/issLab2022/.metadata/.plugins/org.eclipse.jdt.core
-901987760.index
-293419033.index
-1610737145.index
-4099525063.index
-2508056290.index
-2792777484.index
-400547876.index
-1845157734.index
-3685853503.index
-840520662.index
-3628969200.index
-2540607589.index
-646308851.index
-994928661.index
-3776959039.index
-1178600563.index
-1349077438.index
-374528805.index
-2775331383.index
-28588912.index
-2441070919.index
-474221215.index
-1187010825.index
-1022417774.index
-872267076.index
-2173780442.index
+INDEX VERSION 1.131+C:\Users\Roberto\Desktop\Università\ISS\rcalvani\iss2022\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
-1884686672.index
+2393043855.index
+3666573171.index
