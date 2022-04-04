@@ -59,27 +59,29 @@ public class SonarObservable extends SonarModel implements ISonarObservable{
 	
 	@Override
 	public void register(IObserver obs) {
-		// TODO Auto-generated method stub
+		d.addObserver(obs);
 		
 	}
 	
 	@Override
 	public void unregister(IObserver obs) {
-		// TODO Auto-generated method stub
-		
+		d.deleteObserver(obs);
 	}
 	
 	@Override
 	public void sonarProduce() {
+		IDistance dis;
 		try {
 			String data = reader.readLine();
 			if( data == null ) return;
 			int v = Integer.parseInt(data);
 			ColorsOut.out("SonarConcrete | v=" + v );
-			int lastSonarVal = curVal.getVal();
+			int lastSonarVal = d.getVal();
 			if( lastSonarVal != v && v < DomainSystemConfig.sonarDistanceMax) {	
 				//Eliminiamo dati del tipo 3430 //TODO: filtri in sottosistemi a stream
-				updateDistance( v );	 			
+				dis = new Distance(v);
+				d.setVal(dis);
+				//updateDistance( v );	 			
 			}
        }catch( Exception e) {
        		ColorsOut.outerr("SonarConcrete |  " + e.getMessage() );
