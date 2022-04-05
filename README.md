@@ -1,4 +1,4 @@
 # iss2022
 roberto.calvani@studio.unibo.it
-  - creare SonarMock e i test annessi
-  - guarda file:///home/rcalvani/Desktop/ISS/issLab2022/it.unibo.issLabStart/userDocs/Dispense/html/RadarSystemProgetto.html
+  - definire intervallo di confidenza per cui il sonar rileva distanze che sono cambiate in modo "significativo"
+  - inviare TUTTE le distanze rilevate o filtrarle in qualche modo? quando la distanza rilevata può essre diversa da quella inviata? 
