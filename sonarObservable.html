@@ -228,7 +228,9 @@ Attualmente ci sono due possibili opzioni:
 
 Si suppone quindi che il Sonar dovrà comunicare possibilmente via rete con gli osservatori.
 <br>
-Come codice di partenza è fornita la definizione del componente <a href='https://raw.githubusercontent.com/robertocalvani/iss2022/main/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/concrete/SonarConcrete.java'>SonarConcrete</a>
+Non risulta essere chiaro cosa voglia dire l'assunzione "valori di distanza significativi".
+Si suppone quindi che il Sonar dovrà notificare chi in ascolto solo se la distanza calcolata si discosta dall'ultimo valore rilevato di un quantitativo maggiore di una <b>soglia</b>
+
 </div>
 
 <h2>Problem analysis</h2>
@@ -242,6 +244,19 @@ Realizzazione secondo specifiche ma <b>statica</b> -> cosa succede se si decide 
 
 <li>modo 2: Il sonar pubblica i propri risultati prodotti su una risorsa a lui esterna. Questa risorsa verrà resa osservabile (e non il sonar direttamente). 
 <br> Introducendo questo componente aggiuntivo si disaccoppiano le entità observer e observable rendendo la comunicazione non diretta ma mediata e rendendo l'architettura <b>dimanica</b> rispetto a possibili cambiamenti dei componenti.</li>
+
+<br>
+-------------------------------------------------------------------
+<br>
+POST DISCUSSIONE A LEZIONE
+<br>
+La classe osservabile è definita come <a href="https://raw.githubusercontent.com/robertocalvani/iss2022/main/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/DistanceMeasured.java">DistanceMeasured</a> quindi verrà resa osservabile il <b>valore misurato</b> e non una variabile di stato del sonar. 
+Implementerà quindi un'interfaccia <a href="https://raw.githubusercontent.com/robertocalvani/iss2022/main/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/interfaces/IDistanceMeasured.java">IDistanceMeasured</a>.
+<br>
+Quest'ultima interfaccia utilizzerà di fatto il concetto di <b>IDistance</b>, incapsulandolo però in una classe Osservabile, che dispone quindi dei dovuti metodi per aggiungere/eliminare gli Observer
+<br>
+La classe <b>SonarObservable</b> Implementerà quindi un'interfaccia <a href="https://raw.githubusercontent.com/robertocalvani/iss2022/main/it.unibo.radarSystem22.domain/src/it/unibo/radarSystem22/domain/interfaces/ISonarObservable.java">ISonarObservable</a>, che fornirà i metori register/unregister, i quali verranno utilizzati dal Sonar per richiamare i metodi citati in precedenza della classe DistanceMeasured (che permetteranno di aggiungere/eliminare un Observer alla lista degli Observer della <b>distanza</b>)
+
 
 <h2>Test plans</h2> 
 <li>Si pone un ostacolo a distanza DLIMIT1 -> gli Osservatori dovranno ottenere il valore DLIMIT1</li>
