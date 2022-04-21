@@ -26,6 +26,7 @@ import unibo.actor22comm.utils.CommUtils;
              host=    {"localhost","localhost"}, 
              port=    { ""+ApplData.ctxPort, ""+ApplData.ctxPort}, 
              protocol={ "TCP" , "TCP" })
+
 public class UsingActorsWithAnnotOnPc {
 	
  

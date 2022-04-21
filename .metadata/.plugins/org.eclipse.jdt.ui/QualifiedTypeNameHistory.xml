@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.io.InputStream"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.LedMock"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.SonarMock"/>
-    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
     <fullyQualifiedTypeName name="java.io.Reader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.sprint3.main.devicesOnRasp.RadarSysSprint3DevicesOnRaspMain"/>
@@ -16,4 +15,5 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IDistanceMeasured"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DistanceMeasured"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
 </qualifiedTypeNameHistroy>

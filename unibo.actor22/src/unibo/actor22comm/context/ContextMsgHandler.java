@@ -36,12 +36,13 @@ public class ContextMsgHandler extends ApplMsgHandler implements IApplMsgHandler
 		String senderName = msg.msgSender();
 		//Attivo un attore per ricevere la risposta
 		String actorRepyName = Qak22Context.actorReplyPrefix+senderName;
-		if( Qak22Context.getActor(actorRepyName) == null ) { //non esiste già
+		if( Qak22Context.getActor(actorRepyName) == null ) { //non esiste giï¿½
 			ColorsOut.out(name + " | CREATE ACTOR FOR REPLY " + msg, ColorsOut.BLUE);
 			new ActorForReply(actorRepyName, this, conn);
 		}		
 		elabNonRequest(msg,conn);
  	}
+	
 	protected void elabNonRequest( IApplMessage msg, Interaction2021 conn ) {
 		String receiver = msg.msgReceiver();
 		QakActor22 a = Qak22Context.getActor(receiver);
