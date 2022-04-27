@@ -213,6 +213,8 @@ Si desidera realizzare un robot in grado di pulire l'intera superficie di una st
 In che modo il client comunica con il robot? Inviando quali comandi?
 <br>
 Si suppone che il robot sia avviato (ovvero gli si richieda di iniziare a pulire la superficie) sempre nella stessa posizione di partenza.
+<br>
+Si suppone inoltre che la superficie sia divisa in tanti blocchi della dimensione del robot in modo da poter tenere traccia del progresso svolto.
 </div>
 
 
@@ -238,9 +240,9 @@ T    ::= naturalNum
 <li> comunicazione sincrona: mediante l'utilizzo del protocollo <b>HTTP</b> -> i comandi inviati al robot non possono essere interrotti prima di aver ricevuto una risposta (in formato JSON). Richiede l'impiego di un thread.</li>
 <li> comunicazione asincrona: mediante l'utilizzo del protocollo <b>WebSocket</b> -> i comandi possono essere interrotti da un eventuale comando <b>alarm</b>. Richiede l'impiego di thread multipli.</li>
 
-Il robot da progettare non ha bisogno solamente di essere avviato, poi procederà da solo alla scansione e alla pulizia della superficie, per questo motivo non si ritiene necessario l'impiego di una comunicazione asincrona. 
-Perché dovrebbe essere fermato da input esterni?
+Il robot da progettare ha bisogno solamente di essere avviato, poi procederà da solo alla scansione e alla pulizia della superficie, perciò risulta essere necessario l'impiego di una comunicazione asincrona, in quanto si vuole cambiare la direzione del robot anche prima che questo incontri un muro (si pensi al caso in cui va fatto girare in mezzo alla stanza).
 
+<br>
 Per il caso d'uso richiesto è necessario modificare il linguaggio <b>cril</b> nel modo seguente:
 <br>
 <div class="remark">
@@ -250,9 +252,12 @@ Per il caso d'uso richiesto è necessario modificare il linguaggio <b>cril</b> n
     MOVE ::= "activate" | "deactivate"
 </div>
 
+
+
+
 <h2>Test plans</h2> 
 Sono possibili 2 situazioni:
-<li>La superficie è fissata: si divide inizialmente in una matrice di blocchi. Al passaggio del robot i blocchi superati vengono tramutati in "muro", così che al prossimo giro il robot girerà in automatico.  </li>
+<li>La superficie è fissata: si divide inizialmente in una matrice di blocchi (boolean) della dimensione del robot. Al passaggio del robot i blocchi superati vengono posti logicamente a <b>false</b>, in modo tale da non passare sui blocchi già visitati.  </li>
 <li>La superficie è sconosciuta: si opera facendo una prima scansione perimetrale per conoscere le dimensioni, poi si procede come al punto precedente.</li>
 
 <h2>Project</h2> 
